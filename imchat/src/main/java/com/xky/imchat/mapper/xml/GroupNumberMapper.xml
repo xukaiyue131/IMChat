@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xky.imchat.mapper.GroupNumberMapper">
+    <select id="get" resultType="com.xky.imchat.entity.GroupNumber">
+        select * from group_number where id =#{id} and number_id !=#{numberId}
+    </select>
+</mapper>

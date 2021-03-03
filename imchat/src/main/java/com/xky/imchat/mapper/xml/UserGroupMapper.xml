@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xky.imchat.mapper.UserGroupMapper">
+    <select id="getGroup" resultType="com.xky.imchat.entity.UserGroup">
+      select * from user_group where id = any(select id from group_number where number_id =#{id});
+    </select>
+</mapper>
